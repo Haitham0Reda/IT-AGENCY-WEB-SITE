@@ -13,13 +13,6 @@ body {
 
 body {
     font-family: 'saira', sans-serif;
-    display: table;
-    width: 100%;
-    height: 100%;
-    color: #000;
-    position: relative;
-    overflow: hidden;
-    z-index: -1;
 }
 
 a {
@@ -696,6 +689,17 @@ ul {
 
 /* Start animated background */
 
+
+.creasoft::after {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+}
+
+
 .lines {
     position: absolute;
     top: 0;
@@ -804,37 +808,30 @@ ul {
 /* Start Landing Section */
 
 .landing {
-    position: relative;
+    width: 100%;
     height: 100vh;
     background-image: url(/assets/img/bg.png);
-    background-size: cover; 
-    background-position: top left;
+    background-size: cover;
     background-color: #191a1c;
-    overflow: hidden;
-    padding-top: 90px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
 .slideshow {
+    height: 80%;
     width: 50%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
     border-radius: 100px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
 }
 
-/* .landing .slideshow {
-    position: absolute; 
-    right: 0;
-    bottom: 0;
-    border-radius: 100px 0 0 0;
-    width: 50%;
-    overflow: hidden;
-}  */
-
-.landing .slideshow img {
+.slideshow img {
     width: 100%;
-    animation: zoom 20s infinite
+    animation: zoom 20s infinite;
 }
 
 @keyframes zoom {
@@ -881,40 +878,32 @@ ul {
 
 .vertical-social {
     position: absolute;
-    left: 110px;
+    left: 70px;
     top: 50%;
     transform: translate(-50%);
 }
 
-.vertical-social .vertical-media {
+.vertical-media {
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
 }
 
-.vertical-social .vertical-media li {
-    position: relative;
+.vertical-media li {
     padding: 0 20px;
+    position: relative;
 }
 
-.vertical-social .vertical-media li a {
-    color: #fff;
-}
-
-.vertical-social .vertical-media li:hover a {
-    color: #75DAB4;
-}
-
-.vertical-social .vertical-media li::before {
+.vertical-media li::before {
     position: absolute;
     content: "";
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     border: 1px dashed #fff;
     border-radius: 50%;
     left: 0;
-    top: 5px;
-    animation: spin 5s linear infinite;
+    top: 5.5px;
+    animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
@@ -925,11 +914,12 @@ ul {
 
 
 .land {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80vh;
-    margin-right: 50px;
+    padding-right: 30px;
+    padding-top: 30px;
 }
 
 .land .land-content h1 {
@@ -951,24 +941,6 @@ ul {
     animation: typing 3.5s infinite;
 }
 
-.land .land-content p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #e4e4e4
-}
-
-.land .land-content .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 40px;
-}
-
-.land .land-content .buttons>.btun-2 {
-    margin-left: 40px;
-}
-
-
 @-webkit-keyframes typing {
     from {
         width: 0
@@ -988,12 +960,30 @@ ul {
         width: 100%
     }
 }
+
+.land .land-content p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #e4e4e4
+}
+
+.land .land-content .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.land .land-content .buttons .btun1 {
+    margin-right: 40px;
+}
+
 /* Start Landing Section */
 
 /* Start Services */
 .services {
+    margin-top: 70px;
     background: transparent;
-    height: 600px;
 }
 /* End Services */
 
